@@ -12,23 +12,9 @@ class PreloadScene extends Phaser.Scene{
         this.load.spritesheet('player', 'https://xingtan10.github.io/assets/player/move_sprite_1.png',
             { frameWidth: 32, frameHeight: 38, spacing: 32 }
         );
-        // this.load.image('sky', 'assets/sky.png');
-        // this.load.image('sky', 'assets/images/sky.png');
-        // this.load.image('ground', 'assets/images/platform.png');
-        // this.load.image('ground1', 'assets/PNG/tiles/tile001.png');
-        // this.load.image('tile39', 'assets/PNG/tiles/tile039.png');
-        // this.load.image('star', 'assets/images/star.png');
-        // this.load.image('bomb', 'assets/images/bomb.png');
-        // this.load.audio('pickup', 'assets/Sounds/highUp.mp3')
-        // this.load.audio('die', 'assets/Sounds/highDown.mp3')
-        // // this.load.spritesheet('dude', 
-        // //     'assets/images/dude.png',
-        // //     { frameWidth: 32, frameHeight: 48 }
-        // );
     }
 
     create(){
-        // this.add.image(0, 0, 'sky').setOrigin(0);
         this.scene.start('PlayScene')
     }
 }
