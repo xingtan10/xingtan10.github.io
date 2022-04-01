@@ -5,13 +5,26 @@ class PreloadScene extends Phaser.Scene{
     }
     preload ()
     {
-        this.load.tilemapTiledJSON('map', 'assets/crystal_world_map.json');
-        this.load.image('tiles-1', 'assets/main_lev_build_1.png');
-        this.load.image('tiles-2', 'assets/main_lev_build_2.png');
-        this.load.spritesheet('player', 'assets/player/move_sprite_1.png',
+        this.load.tilemapTiledJSON('map', 'https://xingtan10.github.io/assets/crystal_world_map.json');
+        this.load.image('tiles-1', 'https://xingtan10.github.io/assets/main_lev_build_1.png');
+        this.load.image('tiles-2', 'https://xingtan10.github.io/assets/main_lev_build_2.png');
+        // this.load.image('player', 'assets/player/movements/idle01.png');
+        this.load.spritesheet('player', 'https://xingtan10.github.io/assets/player/move_sprite_1.png',
             { frameWidth: 32, frameHeight: 38, spacing: 32 }
         );
-
+        // this.load.image('sky', 'assets/sky.png');
+        // this.load.image('sky', 'assets/images/sky.png');
+        // this.load.image('ground', 'assets/images/platform.png');
+        // this.load.image('ground1', 'assets/PNG/tiles/tile001.png');
+        // this.load.image('tile39', 'assets/PNG/tiles/tile039.png');
+        // this.load.image('star', 'assets/images/star.png');
+        // this.load.image('bomb', 'assets/images/bomb.png');
+        // this.load.audio('pickup', 'assets/Sounds/highUp.mp3')
+        // this.load.audio('die', 'assets/Sounds/highDown.mp3')
+        // // this.load.spritesheet('dude', 
+        // //     'assets/images/dude.png',
+        // //     { frameWidth: 32, frameHeight: 48 }
+        // );
     }
 
     create(){
@@ -19,6 +32,10 @@ class PreloadScene extends Phaser.Scene{
         this.scene.start('PlayScene')
     }
 }
+
+//---------------------- Play Scene ---------------------
+//---------------------- Play Scene ---------------------
+//---------------------- Play Scene ---------------------
 
 class PlayScene extends Phaser.Scene{
     constructor(config){
@@ -55,7 +72,7 @@ class PlayScene extends Phaser.Scene{
        const platforms = map.createStaticLayer('platforms', tileset);
        const playerZones = map.getObjectLayer('player_zones');
        
-       
+       platformColliders.setCollisionByExclusion(-1, true)
 
        return {environment, platforms, platformColliders, playerZones}
        
@@ -181,6 +198,12 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         }
     
 }
+
+//---------------------- Config ---------------------
+//---------------------- Config ---------------------
+//---------------------- Config ---------------------
+
+
 // const widthX = document.body.offsetWidth;
 var config = {
     type: Phaser.AUTO,
