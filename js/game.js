@@ -55,7 +55,7 @@ class PlayScene extends Phaser.Scene{
        const platforms = map.createStaticLayer('platforms', tileset);
        const playerZones = map.getObjectLayer('player_zones');
        
-       platformColliders.setCollisionByExclusion(-1, true)
+       //platformColliders.setCollisionByExclusion(-1, true)
 
        return {environment, platforms, platformColliders, playerZones}
        
