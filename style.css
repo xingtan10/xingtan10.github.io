@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
 body {
   align-items: center;
-  background: #EEF5FD;
+  background: #EEF5FD !important;
   color: #545556;
   display: flex;
   font-family: "Open Sans", sans-serif;
